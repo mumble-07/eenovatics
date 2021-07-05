@@ -187,7 +187,6 @@ body {
   display: grid;
   grid-template-columns: 20% 20% 20% 40%;
   grid-template-rows: 5% 25% 25% 25% 5%;
-  position: relative;
   margin-bottom: 10px;
 }
 
@@ -281,17 +280,19 @@ body {
 #services {
   width: 100vw;
   height: 100vh;
-  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
   background: black;
   color: white;
   h1 {
+    padding-top: 60px;
     font: 60px $font-stack;
   }
   h2 {
-    font: 30px $font-stack;
+    font: 45px $font-stack;
   }
   h3 {
-    font: 15px $font-stack1;
+    font: 20px $font-stack1;
   }
 }
 
@@ -300,70 +301,179 @@ body {
   justify-content: center;
 }
 #service-cards {
+  width: 100vw;
+  height: 100vh;
   display: grid;
+  grid-template-columns: 40% 15% 15% 15% 15%;
+  grid-template-rows: 5% 25% 25% 25% 5%;
 }
 
 #service1 {
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
-
-  @media only screen and (max-width: $mobileS),
-    (max-width: $mobileM),
-    (max-width: $mobileL) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 5% 5% 5% 5%;
 }
 
 #service2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 4;
-  margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  @media only screen and (max-width: $mobileS),
-    (max-width: $mobileM),
-    (max-width: $mobileL) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  margin: 5% 5% 5% 5%;
 }
 
 #service3 {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  margin: 5% 5% 5% 5%;
+}
+
+#service-images {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
   grid-row-end: 4;
-  margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  @media only screen and (max-width: $mobileS),
-    (max-width: $mobileM),
-    (max-width: $mobileL) {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 30%;
+    height: auto;
+    border: none;
+    border-radius: 50px;
+  }
+}
+
+#ser1 {
+  -webkit-animation: bounce-in-top 1.1s both;
+  animation: bounce-in-top 1.1s both;
+
+  @keyframes bounce-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+      transform: translateY(-500px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: translateY(-65px);
+      transform: translateY(-65px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: translateY(-28px);
+      transform: translateY(-28px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    90% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
+}
+
+#ser2 {
+  -webkit-animation: slide-in-elliptic-bottom-fwd 0.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-bottom-fwd 0.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  @-webkit-keyframes slide-in-elliptic-bottom-fwd {
+    0% {
+      -webkit-transform: translateY(600px) rotateX(30deg) scale(0);
+      transform: translateY(600px) rotateX(30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+      transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% -1400px;
+      transform-origin: 50% -1400px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-elliptic-bottom-fwd {
+    0% {
+      -webkit-transform: translateY(600px) rotateX(30deg) scale(0);
+      transform: translateY(600px) rotateX(30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+      transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% -1400px;
+      transform-origin: 50% -1400px;
+      opacity: 1;
+    }
+  }
+}
+
+#ser3 {
+  -webkit-animation: roll-in-right 0.6s ease-out both;
+  animation: roll-in-right 0.6s ease-out both;
+  @-webkit-keyframes roll-in-right {
+    0% {
+      -webkit-transform: translateX(800px) rotate(540deg);
+      transform: translateX(800px) rotate(540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-right {
+    0% {
+      -webkit-transform: translateX(800px) rotate(540deg);
+      transform: translateX(800px) rotate(540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
   }
 }
 
