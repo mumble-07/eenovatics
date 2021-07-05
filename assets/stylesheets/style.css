@@ -9,10 +9,6 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
-  background-image: url("../img/bg6.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -54,6 +50,12 @@ body {
 #home {
   width: 100vw;
   height: 100vh;
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: grid;
   grid-template-columns: 45% 55%;
   grid-template-rows: 15% 5% 20% 20% 20% 5% 15%;
@@ -140,74 +142,108 @@ body {
 #aboutUs {
   width: 100vw;
   height: 100vh;
-  padding-top: 50px;
-  background: #ffffff;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  background: #e0eafc;
+  background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);
+  background: linear-gradient(to right, #cfdef3, #e0eafc);
+  display: flex;
+  flex-direction: column;
 }
 #aboutUs h1 {
-  padding-top: 120px;
+  padding-top: 60px;
   font: 60px "Raleway", sans-serif;
   color: #cc271c;
 }
 #aboutUs h3 {
   font: 40px "Raleway", sans-serif;
-  margin: 0 auto;
+  margin: 5% 5% 5% 5%;
 }
 #aboutUs p {
   font: 15px "Comfortaa", cursive;
+  margin: 5% 5% 5% 5%;
 }
 
 #aboutusText {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2s;
   text-align: center;
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
-  align-items: flex-end;
 }
 
-#who-we-are {
-  grid-column-start: 1;
-  grid-column-end: 1;
+#card-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10% 20% 20% 20% 20% 10%;
+  grid-template-rows: 10% 10% 10% 10% 10% 20% 20% 10%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#card1,
+#card2,
+#card3 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#card1:hover,
+#card2:hover,
+#card3:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#card1 {
+  grid-column-start: 3;
+  grid-column-end: 5;
   grid-row-start: 2;
-  margin: 0 auto;
-  padding-left: 50px;
-}
-
-#mission {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 3;
-  margin: 0 auto;
-  padding-left: 50px;
-}
-
-#vision {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 4;
-  margin: 0 auto;
-  padding-left: 50px;
-}
-
-#video iframe {
-  width: 560px;
-  height: 315px;
-}
-
-#video {
-  width: 560px;
-  height: 315px;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 3;
   grid-row-end: 4;
+}
+
+#card2 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+#card3 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+#card1,
+#card2,
+#card3 {
+  width: 35vw;
+  height: 25vh;
+  border-radius: 25px;
   margin: 0 auto;
+  box-shadow: 0 4px 8px 0 #d4b7b7, 0 6px 20px 0 rgba(255, 255, 255, 0.596);
+  -webkit-animation: scale-in-hor-center 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-hor-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
 }
 
 /*CONT3*/
@@ -216,9 +252,6 @@ body {
   height: 100vh;
   padding-top: 100px;
   background: black;
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 15% 20% 35% 30%;
   color: white;
 }
 #services h1 {
@@ -232,10 +265,12 @@ body {
 }
 
 #servicesText {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#service-cards {
+  display: grid;
 }
 
 #service1 {
