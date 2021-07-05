@@ -159,10 +159,7 @@ body {
 #aboutUs {
   width: 100vw;
   height: 100vh;
-  background: #e0eafc;
-  background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);
-  background: linear-gradient(to right, #cfdef3, #e0eafc);
-
+  background: wihte;
   display: flex;
   flex-direction: column;
   h1 {
@@ -172,11 +169,11 @@ body {
   }
   h3 {
     font: 40px $font-stack;
-    margin: 5% 5% 5% 5%;
+    margin: 2% 0% 0% 5%;
   }
   p {
     font: 15px $font-stack1;
-    margin: 5% 5% 5% 5%;
+    margin: 2% 5% 5% 5%;
   }
 }
 
@@ -188,10 +185,10 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 10% 20% 20% 20% 20% 10%;
-  grid-template-rows: 10% 10% 10% 10% 10% 20% 20% 10%;
+  grid-template-columns: 20% 20% 20% 40%;
+  grid-template-rows: 5% 25% 25% 25% 5%;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #card1,
@@ -208,31 +205,43 @@ body {
 }
 
 #card1 {
-  grid-column-start: 3;
-  grid-column-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
   grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row-end: 3;
 }
 
 #card2 {
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 4;
-  grid-row-start: 5;
-  grid-row-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 #card3 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#video {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
   grid-column-start: 4;
-  grid-column-end: 6;
-  grid-row-start: 5;
-  grid-row-end: 7;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 5;
 }
 
 #card1,
 #card2,
 #card3 {
-  width: 35vw;
-  height: 25vh;
+  width: 55vw;
+  height: 18vh;
   border-radius: 25px;
   margin: 0 auto;
   box-shadow: 0 4px 8px 0 rgb(212, 183, 183),
