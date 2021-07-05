@@ -116,7 +116,7 @@ body {
 }
 
 .slider {
-  color: yellow;
+  color: rgb(255, 255, 0);
   margin-left: 20px;
   box-sizing: border-box;
   animation: slider 5s linear infinite;
@@ -146,11 +146,9 @@ body {
   }
 }
 
-//TRIAL
-
 /*CONT2*/
 
-#about {
+#aboutUs {
   width: 100vw;
   height: 100vh;
   padding-top: 50px;
@@ -190,12 +188,6 @@ body {
   grid-row-start: 2;
   margin: 0 auto;
   padding-left: 50px;
-
-  @media only screen and (max-width: $mobileS),
-    (max-width: $mobileM),
-    (max-width: $mobileL) {
-    padding-left: 20px;
-  }
 }
 
 #mission {
@@ -204,11 +196,6 @@ body {
   grid-row-start: 3;
   margin: 0 auto;
   padding-left: 50px;
-  @media only screen and (max-width: $mobileS),
-    (max-width: $mobileM),
-    (max-width: $mobileL) {
-    padding-left: 20px;
-  }
 }
 
 #vision {
@@ -217,22 +204,11 @@ body {
   grid-row-start: 4;
   margin: 0 auto;
   padding-left: 50px;
-  @media only screen and (max-width: $mobileS),
-    (max-width: $mobileM),
-    (max-width: $mobileL) {
-    padding-left: 20px;
-  }
 }
 
 #video iframe {
   width: 560px;
   height: 315px;
-  @media only screen and (max-width: $mobileS),
-    (max-width: $mobileM),
-    (max-width: $mobileL) {
-    width: 140px;
-    height: 115px;
-  }
 }
 
 #video {
@@ -243,18 +219,6 @@ body {
   grid-row-start: 3;
   grid-row-end: 4;
   margin: 0 auto;
-
-  @media only screen and (max-width: $mobileS),
-    (max-width: $mobileM),
-    (max-width: $mobileL) {
-    width: 140px;
-    height: 115px;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    margin: 0 auto;
-  }
 }
 
 /*CONT3*/
@@ -276,28 +240,6 @@ body {
   }
   h3 {
     font: 15px $font-stack1;
-  }
-
-  @media only screen and (max-width: $mobileS),
-    (max-width: $mobileM),
-    (max-width: $mobileL) {
-    width: 100vw;
-    height: 50%;
-    padding-top: 50px;
-    background: black;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 15% 20% 35% 30%;
-    color: white;
-    h1 {
-      font: 30px $font-stack;
-    }
-    h2 {
-      font: 12px $font-stack;
-    }
-    h3 {
-      font: 5px $font-stack1;
-    }
   }
 }
 
