@@ -138,16 +138,15 @@
     <div id="contactUs">
       <h1 id="contact-us">CONTACT US!</h1>
       <form
-        onsubmit="return results();"
-        action="landing-page.html"
-        method="GET"
+        action="mailto:admin@eenovatics.com"
+        method="POST"
+        enctype="multipart/form-data"
       >
         <div id="form">
           <div>
-            <br />
             <h2>Message Us!</h2>
-            <br /><br />
-            <label id="name" for="name">Full Name: </label><br />
+            >
+            <label id="name" for="name">Full Name: </label>
             <input
               type="text"
               name="name"
@@ -155,11 +154,10 @@
               required
               placeholder="Full here"
               size="40px;"
-            /><br /><br />
+            />
           </div>
           <div>
-            <label id="email" for="email"> Email:</label>
-            <br />
+            <label id="email" for="email">Email: </label>
             <input
               type="email"
               name="email Add"
@@ -167,29 +165,25 @@
               required
               placeholder="Email Address here"
               size="40px;"
-            /><br /><!--US9--><!--US10-->
+            />
           </div>
           <div id="textarea">
-            <br />
-            <label for="msg">Leave a message for us!</label><br /><br />
+            <label for="msg">Leave a message for us!</label>
             <textarea name="msg" id="msg"></textarea>
           </div>
           <div id="submit">
-            <br />
             <input type="submit" id="submit" name="button" value="send" />
           </div>
         </div>
       </form>
       <div id="where">
-        <br />
         <h2>Where to find us?</h2>
-        <br />
+
         <h4>
-          G/F Bl. Pier Giorgio Frassati, O.P. Bldg.,<br />
-          University of Santo Tomas, España Blvd., Sampaloc, Manila, Philippines
-          1008
+          G/F Bl. Pier Giorgio Frassati, O.P. Bldg., University of Santo Tomas,
+          España Blvd., Sampaloc, Manila, Philippines 1008
         </h4>
-        <br />
+
         <img id="map" src="assets/img/map1.jpg" alt="location-map" />
       </div>
       <div id="send">
